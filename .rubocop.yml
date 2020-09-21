@@ -1,0 +1,13 @@
+inherit_gem:
+  rubocop-g2:
+    - config/ruby/default.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-g2
+
+AllCops:
+  TargetRubyVersion: 2.6
+
+Style/Documentation:
+  Enabled: false
