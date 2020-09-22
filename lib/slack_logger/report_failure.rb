@@ -1,5 +1,4 @@
 require 'slack-ruby-client'
-
 module SlackLogger
   class ReportFailure
     attr_reader :task, :block
