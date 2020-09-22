@@ -2,8 +2,6 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/slack_logger`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure slack_logger with a file inside of your config/initializers directory.
+It needs three configuration variables.
+Channel references the slack channel you would like your notices sent to.
+Token is used with the slack ruby client to connect to your slack environment.
+Enabled takes a block, which the gem uses to know what messages to send to your slack client.
+Example:
+
+```ruby
+SlackLogger.configure do |c|
+    c.channel = '#slack-errors-channel'
+    c.token = ENV['ENCRYPTED_SLACK_TOKEN']
+    c.enabled = proc {|error| Rails.env.production? || error.type == 'Slackable Development Error'}
+end
+```
 
 ## Development
 
@@ -33,7 +44,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/slack_logger. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/slack_logger/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## License
 
