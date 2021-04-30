@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     slack_logger (0.1.0)
-      slack-ruby-client (>= 0.15, < 1.0)
+      slack-ruby-client (>= 0.14, < 1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -36,7 +36,7 @@ GEM
     rack (2.2.3)
     rainbow (3.0.0)
     rake (12.3.3)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
