@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    slack_logger (0.1.0)
+    slack_logger (0.2.0)
       slack-ruby-client (>= 0.14, < 1.0)
 
 GEM
@@ -17,12 +17,19 @@ GEM
     concurrent-ruby (1.1.8)
     diff-lcs (1.4.4)
     docile (1.4.0)
-    faraday (1.0.1)
+    faraday (1.4.1)
+      faraday-excon (~> 1.1)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.1)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords (>= 0.0.4)
+    faraday-excon (1.1.0)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.1.0)
     faraday_middleware (1.0.0)
       faraday (~> 1.0)
     fivemat (1.3.7)
-    gli (2.19.2)
+    gli (2.20.0)
     hashie (4.1.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
@@ -74,13 +81,14 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.4)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.3)
-    slack-ruby-client (0.15.1)
+    slack-ruby-client (0.17.0)
       faraday (>= 1.0)
       faraday_middleware
       gli
