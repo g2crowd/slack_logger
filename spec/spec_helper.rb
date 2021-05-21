@@ -1,6 +1,8 @@
 require 'simplecov'
 SimpleCov.start do
   add_filter %w(/spec/)
+  enable_coverage :branch
+  primary_coverage :branch
 end
 
 require 'bundler/setup'
