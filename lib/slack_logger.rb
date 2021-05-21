@@ -1,4 +1,5 @@
 require 'slack_logger/version'
+require 'slack_logger/post_message'
 require 'slack_logger/report_failure'
 require 'slack_logger/configuration'
 

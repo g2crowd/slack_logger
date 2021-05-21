@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ruby: g2crowd/ruby@0.0.10
+  ruby: g2crowd/ruby@0.0.17
 
 workflows:
   version: 2
@@ -9,6 +9,6 @@ workflows:
     jobs:
       - ruby/build:
           context: g2crowd-global
-          ruby: "2.7.1"
-          bundler-version: "2.1.4"
+          ruby: "2.7.2"
+          bundler-version: "2.2.15"
           setup-database: false
