@@ -29,9 +29,19 @@ Example:
 
 ```ruby
 SlackLogger.configure do |c|
-    c.channel = '#slack-errors-channel'
-    c.token = ENV['ENCRYPTED_SLACK_TOKEN']
-    c.enabled = proc {|error| Rails.env.production? || error.type == 'Slackable Development Error'}
+  c.channel = '#slack-errors-channel'
+  c.token = ENV['ENCRYPTED_SLACK_TOKEN']
+  c.enabled = proc { |error| Rails.env.production? || error.type == 'Slackable Development Error' }
+end
+```
+
+Then to use it within a Rake task:
+
+```ruby
+task :complicated_task do |t|
+  SlackLogger.report_failure(t) do
+    # complicated stuff
+  end
 end
 ```
 
