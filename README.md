@@ -29,9 +29,9 @@ Example:
 
 ```ruby
 SlackLogger.configure do |c|
-    c.channel = '#slack-errors-channel'
-    c.token = ENV['ENCRYPTED_SLACK_TOKEN']
-    c.enabled = proc {|error| Rails.env.production? || error.type == 'Slackable Development Error'}
+  c.channel = '#slack-errors-channel'
+  c.token = ENV['ENCRYPTED_SLACK_TOKEN']
+  c.enabled = proc {|error| Rails.env.production? || error.type == 'Slackable Development Error'}
 end
 ```
 

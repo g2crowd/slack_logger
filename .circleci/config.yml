@@ -9,6 +9,6 @@ workflows:
     jobs:
       - ruby/build:
           context: g2crowd-global
-          ruby: "2.7.2"
-          bundler-version: "2.2.15"
+          ruby: "3.0.2"
+          bundler-version: "2.2.22"
           setup-database: false
