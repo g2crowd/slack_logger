@@ -8,5 +8,8 @@ require:
 inherit_from:
   - ../.rubocop.yml
 
+RSpec/MultipleExpectations:
+  Enabled: false
+
 Style/RescueModifier:
   Enabled: false

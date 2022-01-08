@@ -1,8 +1,10 @@
 require 'simplecov'
 SimpleCov.start do
   add_filter %w(/spec/)
-  enable_coverage :branch
-  primary_coverage :branch
+  if Gem::Version.new(SimpleCov::VERSION) >= Gem::Version.new('0.21')
+    enable_coverage :branch
+    primary_coverage :branch
+  end
 end
 
 require 'bundler/setup'
