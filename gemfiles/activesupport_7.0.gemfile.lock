@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     slack_logger (0.2.0)
       slack-ruby-client (>= 0.14, < 1.0)
@@ -75,13 +75,13 @@ GEM
     rspec-support (3.10.3)
     rspec_junit_formatter (0.5.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (1.12.1)
+    rubocop (1.24.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.2.0, < 2.0)
+      rubocop-ast (>= 1.15.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.15.1)
@@ -94,9 +94,8 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rspec (2.4.0)
-      rubocop (~> 1.0)
-      rubocop-ast (>= 1.1.0)
+    rubocop-rspec (2.7.0)
+      rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     simplecov (0.21.2)
@@ -123,14 +122,13 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  activesupport (~> 7.0, < 8.0)
   appraisal
   fivemat
   rake (~> 12.0)
   rspec (~> 3.0)
   rspec_junit_formatter
-  rubocop (= 1.12.1)
   rubocop-g2
-  rubocop-rspec (= 2.4.0)
   simplecov (= 0.21.2)
   slack_logger!
 

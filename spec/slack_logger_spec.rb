@@ -3,7 +3,7 @@ require 'rake'
 
 RSpec.describe SlackLogger do
   let(:task) { instance_double(Rake::Task, name: 'refresh') }
-  let(:block) { proc {} }
+  let(:block) { proc { nil } }
   let(:reporter) { instance_double SlackLogger::ReportFailure, call: true }
 
   describe '::report_failure' do

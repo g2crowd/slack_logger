@@ -9,7 +9,9 @@ require:
 AllCops:
   NewCops: enable
   SuggestExtensions: false
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 2.4
+  Exclude:
+    - gemfiles/*
 
 Style/Documentation:
   Enabled: false
