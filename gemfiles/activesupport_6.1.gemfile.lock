@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    slack_logger (0.2.0)
+    slack_logger (1.0.0)
       slack-ruby-client (>= 0.14, < 1.0)
 
 GEM
@@ -47,7 +47,7 @@ GEM
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
     fivemat (1.3.7)
-    gli (2.20.1)
+    gli (2.21.0)
     hashie (5.0.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
