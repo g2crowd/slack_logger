@@ -13,6 +13,7 @@ module SlackLogger
     end
 
     def call
+      return unless SlackLogger.config.enabled.call(channel: channel, text: text)
       client.chat_postMessage channel: channel, text: text, attachments: attachments
     end
 

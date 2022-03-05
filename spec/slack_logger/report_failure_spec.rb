@@ -18,7 +18,7 @@ RSpec.describe SlackLogger::ReportFailure do
 
   describe '#call' do
     context 'when block does not raise error' do
-      let(:block) { proc { nil } }
+      let(:block) { proc {} }
 
       it 'does not send a message' do
         reporter.call

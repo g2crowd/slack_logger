@@ -12,7 +12,7 @@ module SlackLogger
     def call
       block.call
     rescue StandardError => e
-      ping(task, e) if SlackLogger.config.enabled.call(e)
+      ping(task, e)
       raise e
     end
 
