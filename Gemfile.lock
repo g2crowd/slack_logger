@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    slack_logger (1.0.0)
+    slack_logger (1.0.1)
       slack-ruby-client (>= 0.14, < 1.0)
 
 GEM
