@@ -15,3 +15,7 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
+Layout/LineLength:
+  Exclude:
+    - spec/slack_logger/post_message_spec.rb
